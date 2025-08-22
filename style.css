@@ -1,0 +1,155 @@
+/* General */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+  color: #333;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Dark mode */
+body.dark {
+  background: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark section {
+  background: #2b2b2b;
+  color: #f5f5f5;
+}
+
+body.dark .navbar {
+  background: #333;
+}
+
+body.dark footer {
+  background: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff6f61;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ffe066;
+}
+
+#darkToggle {
+  background: white;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+body.dark #darkToggle {
+  background: #444;
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 3px solid #ff6f61;
+}
+
+/* Sections */
+section {
+  padding: 30px;
+  margin: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* About page list */
+.about ul {
+  list-style: "✨ ";
+  padding-left: 20px;
+}
+
+/* Buttons */
+button {
+  background: #ff6f61;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #e65c50;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #ff6f61;
+  color: white;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #ff6f61;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
